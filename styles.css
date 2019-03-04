@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div, article, section, header, footer, nav, figure, li {
+  position: relative;
+}
+
+div {
+  display: block;
+}
+
+html {
+  background: #353b40;
+  font-family: 'Lato', sans-serif;
+  padding: 5%;
+}
+
+body {
+  color: #fff;
+}
+
+.page-wrapper {
+  background: #3c444a;
+  padding: 5%;
+}
+
+.top-stuff {
+  color: #ffa929;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.top-stuff a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.in-header {
+  display: inline-block;
+  padding: 1em;
+}
+
+section.h1 {
+  padding: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+    .in-header {
+      display: block;
+      left: 25%;
+      width: 100%;
+    }
+}
