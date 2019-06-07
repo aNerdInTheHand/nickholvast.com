@@ -1,0 +1,14 @@
+.cv-page {
+  background-color: #7FDBFF;
+  color: #001f3f;
+}
+
+.cv-section {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 3px;
+  padding: 1.2rem;
+  background-color: aliceblue;
+  text-align: center;
+}

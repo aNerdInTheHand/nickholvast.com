@@ -5,24 +5,44 @@
   	<title>Nick Holvast</title>
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<meta name="author" content="Nick Holvast">
-  	<meta name="description" content="A website all about Nick Holvast.">
+  	<meta name="description" content="For Nick Holvast enthusiasts.">
   	<meta name="robots" content="all">
     <title>Nick Holvast</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cv.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script>
+      function toggleElement(elem) {
+        var e = document.getElementById(elem)
+        if (e.style.display === "none") {
+          e.style.display = "inline-block";
+        } else {
+          e.style.display = "none";
+        }
+      }
+    </script>
   </head>
   <body id="nick-holvast-com">
-    <div class="page-wrapper">
-      <section class="top-stuff">
-        <header role="banner">
-          <div class="header-main in-header">
-            <h1>Nick Holvast</h1>
-          </div>
-          <div class="header-sub in-header"><p><a href="https://www.github.com/aNerdInTheHand">Full Stack Developer</a></p></div>
-          <div class="header-sub in-header"><p><a href="https://soundcloud.com/nick-holvast">Guitarist</a></p></div>
-          <div class="header-sub in-header"><p>Some other stuff</p></div>
-          </div>
-        </header>
+    <div class="page-wrapper cv-page">
+      <section class="cv-main">
+        <div class="header-main in-header">
+          <h1>Nick Holvast - Software Engineer</h1>
+        </div>
+        <div class="cv-section cv-statement">
+          <h2 onclick="toggleElement('statement')">Statement</h2>
+          <p id="statement">Lorem Ipsum Statement</p>
+        </div>
+        <div class="cv-section cv-skills">
+          <h2 onclick="toggleElement('skills')">Skills</h2>
+          <p id="skills">Lorem Ipsum Skillz</p>
+        </div>
+        <div class="cv-section cv-education">
+          <h2 onclick="toggleElement('education')">Education</h2>
+          <p id="education">Lorem Ipsum Education</p>
+        </div>
+        <div class="cv-section cv-about">
+          <h2 onclick="toggleElement('about-me')">Education</h2>
+          <p id="about-me">Lorem Ipsum About Me</p>
+        </div>
       </section>
     </div>
   </body>
