@@ -1,0 +1,148 @@
+:root {
+  --background-color: #10073d;
+  --content-color: #ffa929;
+  --header-footer-color: #88f24f;
+}
+
+.atf-site {
+  background-color: var(--background-color);
+  color: var(--content-color);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Maiden Orange', cursive;
+  font-size: 1.5rem;
+  min-height: 98vh;
+}
+
+.atf-offline-site {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  min-height: 98vh;
+}
+
+.atf-page {
+  display: flex;
+  flex: 1;
+  font-family: 'Stylish', sans-serif;
+  justify-content: center;
+}
+
+.atf-main-header {
+  align-items: center;
+  color: var(--header-footer-color);
+  display: flex;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  width: 100%;
+}
+
+.atf-main-header::before,
+.atf-main-header::after {
+  content: "";
+  background:repeating-linear-gradient(45deg, currentColor 0 .1em);
+  flex: 1;
+  height: .2em;
+  margin: .2em;
+}
+
+button {
+  background-color: #88f24f;
+  border-radius: 1rem;
+  font-family: 'Stylish', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 25%;
+  max-height: 20%;
+  max-width: 50vw;
+  min-width: 50vw;
+}
+
+.home-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-flex-container p {
+  width: 100%;
+}
+
+.home-flex-container-offline {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-flex-container-offline p {
+  text-align: right;
+  width: 50vw;
+}
+
+.home-flex-container-offline::after {
+  content: "";
+  background: url('assets/allanaww.webp');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.45;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.rumour-element {
+  flex: 1 0 100%;
+  width: 100%;
+}
+
+#rumour {
+  text-align: center;
+}
+
+.footer-flex-container {
+  align-items: center;
+  border-top: 1px solid var(--header-footer-color);
+  /* background-color: #eaeff7; */
+  background-color: #10073d;
+  color: var(--header-footer-color);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.footer-element {
+  flex-grow: 1;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-flex-container {
+    font-size: 1rem;
+  }
+  .home-flex-container-offline {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .home-flex-container-offline::after {
+    content: "";
+    background: url('assets/allanwoo.webp');
+    background-repeat: repeat;
+    background-size: 50vw;
+    opacity: 0.35;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  .home-flex-container-offline p {
+    color: #000000;
+    text-align: center;
+  }
+}
