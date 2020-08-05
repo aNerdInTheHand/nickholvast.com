@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
 .page {
-  align-content: center;
-  display: flex;
+  font-family: 'Nunito', sans-serif;
   max-width: 960px;
-  text-align: center;
   width: 100vw;
 }
 
@@ -14,24 +14,4 @@
   text-align: center;
   width: 100vw;
   z-index: 2;
-}
-
-.navTopLevel {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-
-.navRow {
-  display: flex;
-  justify-content: center;
-}
-
-.navItem {
-  border: 1px solid black;
-  color: #e3d26f;
-  list-style: none;
-  text-align: center;
-  text-decoration: none;
-  width: 20%;
 }

@@ -1,14 +1,8 @@
 .container {
-  background-color: #2f1b25;
+  background-color: #172a3a;
   color: #e3d26f;
   display: flex;
   justify-content: center;
   margin: 0 auto;
   height: 100vh;
-}
-
-h1 {
-  border: 1px solid black;
-  font-size: 2rem;
-  text-align: center;
 }
