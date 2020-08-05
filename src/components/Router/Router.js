@@ -1,36 +1,44 @@
-import React, {Suspense, lazy} from 'react'
+import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import classes from './Router.module.css'
 import ErrorBoundary from '../Utils/ErrorBoundary'
+import { Container, Modal, Navbar, Nav, NavItem } from 'react-bootstrap'
 
 const Redux = lazy(() => import('../Redux'))
 const Games = lazy(() => import('../Games'))
 const Home = lazy(() => import('../Home'))
 const Sully = lazy(() => import('../Sully'))
 
-const renderFallback = () => <div className={classes.fallback}>Loading...</div>
+const renderFallback = () => (
+  <Modal.Dialog>
+    <Modal.Body>Loading...</Modal.Body>
+  </Modal.Dialog>
+)
 
 export default () => (
   <div className={classes.page}>
     <Router>
       <Suspense fallback={renderFallback()}>
-        <div className={classes.navTopLevel}>
-          <nav>
-            <ul className={classes.navRow}>
-              <li className={classes.navItem}>
-                <Link to="/">Home</Link>
-              </li>
-              <li className={classes.navItem}>
-                <Link to="/sully">Sully</Link>
-              </li>
-              <li className={classes.navItem}>
-                <Link to="/redux">Redux</Link>
-              </li>
-              <li className={classes.navItem}>
-                <Link to="/games">Games</Link>
-              </li>
-            </ul>
-          </nav>
+        <div>
+          <Container fluid>
+            <Navbar bg='light'>
+            <Navbar.Brand href='https://github.com/anerdinthehand'>aNerdInTheHand</Navbar.Brand>
+              <Nav className='mr-auto'>
+                <NavItem href='/'>
+                  <Nav.Link as={Link} to='/'>Home</Nav.Link>
+                </NavItem>
+                <NavItem href='/sully'>
+                  <Nav.Link as={Link} to='/sully'>Sully</Nav.Link>
+                </NavItem>
+                {/* <NavItem href='redux'>
+                  <Nav.Link as={Link} to='/redux'>Redux</Nav.Link>
+                </NavItem>
+                <NavItem href='games'>
+                  <Nav.Link as={Link} to='/games'>Games</Nav.Link>
+                </NavItem> */}
+              </Nav>
+            </Navbar>
+          </Container>
 
           <Switch>
             <Route path="/sully">
@@ -38,7 +46,7 @@ export default () => (
                 <Sully />
               </ErrorBoundary>
             </Route>
-            <Route path="/redux">
+            {/* <Route path="/redux">
               <ErrorBoundary>
                 <Redux />
               </ErrorBoundary>
@@ -47,7 +55,7 @@ export default () => (
               <ErrorBoundary>
                 <Games />
               </ErrorBoundary>
-            </Route>
+            </Route> */}
             <Route path="/">
               <ErrorBoundary>
                 <Home />

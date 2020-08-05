@@ -9,7 +9,7 @@ const renderImage = (image, key, width) => (
   <Carousel.Item key={key}>
     <img
       className='d-block'
-      src={width >= 800 ? image.large : image.small}
+      src={image.small}
       alt={image.alt}
     />
     <Carousel.Caption>
