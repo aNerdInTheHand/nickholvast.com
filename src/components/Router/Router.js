@@ -22,7 +22,15 @@ export default () => (
         <div>
           <Container fluid>
             <Navbar bg='light'>
-            <Navbar.Brand href='https://github.com/anerdinthehand'>aNerdInTheHand</Navbar.Brand>
+              <Navbar.Brand href='https://www.github.com/anerdinthehand' target='_blank' rel='noopener noreferrer'>
+                <img
+                  src="./favicon.ico"
+                  width="30"
+                  height="30"
+                  className="d-inline-block align-top"
+                  alt="NH logo"
+                />
+              </Navbar.Brand>
               <Nav className='mr-auto'>
                 <NavItem href='/'>
                   <Nav.Link as={Link} to='/'>Home</Nav.Link>
