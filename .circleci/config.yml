@@ -46,7 +46,7 @@ workflows:
       - deploy:
         requires:
           - build
-            filters:
-              branches:
-                only:
-                  - infrastructure
+          filters:
+            branches:
+              only:
+                - infrastructure
