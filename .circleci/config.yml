@@ -1,5 +1,9 @@
 version: 2.1
 
+# orbs to use in steps
+orbs:
+  aws-cli: circleci/aws-cli@1.2.1
+
 # define jobs we want to run in pipeline
 jobs:
   build:
