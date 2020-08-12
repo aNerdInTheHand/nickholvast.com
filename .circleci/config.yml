@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+
+# define jobs we want to run in pipeline
 jobs:
   build:
     docker:
@@ -15,7 +17,6 @@ jobs:
           root: .
           paths: build
   deploy:
-    name: deploy
     executor: aws-cli/default
     working_directory: ~/react-application
     steps:
@@ -28,19 +29,20 @@ jobs:
           name: Deploy to S3
           command: |
             aws s3 sync ./dist/ s3://nickholvast.com --delete
+
+# orchestrate job run sequence
 workflows:
-  version: 2
   build-and-deploy:
     jobs:
-      - build:
-          filters:
-            branches:
-              only:
-                - infrastructure
+      - build
+          # filters:
+          #   branches:
+          #     only:
+          #       - infrastructure
       - deploy:
           requires:
             - build
-          filters:
-            branches:
-              only:
-                - infrastructure
+          # filters:
+          #   branches:
+          #     only:
+          #       - infrastructure
