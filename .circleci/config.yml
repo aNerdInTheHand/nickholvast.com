@@ -15,6 +15,7 @@ jobs:
           root: .
           paths: build
   deploy:
+    name: deploy
     executor: aws-cli/default
     working_directory: ~/react-application
     steps:
