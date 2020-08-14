@@ -21,7 +21,7 @@ export default () => (
       <Suspense fallback={renderFallback()}>
         <div>
           <Container fluid>
-            <Navbar bg='light'>
+            <Navbar className={classes.navbar}>
               <Navbar.Brand href='https://www.github.com/anerdinthehand' target='_blank' rel='noopener noreferrer'>
                 <img
                   src="./favicon.ico"

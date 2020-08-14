@@ -15,3 +15,9 @@
   width: 100vw;
   z-index: 2;
 }
+
+.navbar {
+  background-color: #f4f0bb;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
