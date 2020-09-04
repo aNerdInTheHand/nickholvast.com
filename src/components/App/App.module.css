@@ -1,0 +1,8 @@
+.container {
+  background-color: #172a3a;
+  color: #e3d26f;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100vh;
+}
