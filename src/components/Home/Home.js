@@ -11,7 +11,7 @@ export default () => (
     </Row>
     <Row className={classes.homeRow}>
       <Col>
-        <Jumbotron className={classes.jumbotron}>🏗️️ Site under construction</Jumbotron>
+        <Jumbotron className={classes.jumbotron}>️I am Nick.</Jumbotron>
       </Col>
     </Row>
   </Container>

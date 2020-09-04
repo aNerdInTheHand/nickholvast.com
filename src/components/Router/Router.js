@@ -40,10 +40,10 @@ export default () => (
                 </NavItem>
                 {/* <NavItem href='redux'>
                   <Nav.Link as={Link} to='/redux'>Redux</Nav.Link>
-                </NavItem>
-                <NavItem href='games'>
+                </NavItem> */ }
+                <NavItem href='/games'>
                   <Nav.Link as={Link} to='/games'>Games</Nav.Link>
-                </NavItem> */}
+                </NavItem>
               </Nav>
             </Navbar>
           </Container>
@@ -58,12 +58,12 @@ export default () => (
               <ErrorBoundary>
                 <Redux />
               </ErrorBoundary>
-            </Route>
+            </Route> */}
             <Route path="/games">
               <ErrorBoundary>
                 <Games />
               </ErrorBoundary>
-            </Route> */}
+            </Route>
             <Route path="/">
               <ErrorBoundary>
                 <Home />
