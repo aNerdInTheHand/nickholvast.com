@@ -6,6 +6,17 @@ orbs:
 
 # define jobs we want to run in pipeline
 jobs:
+  test:
+    docker:
+      - image: circleci/node:latest
+    parallelism: 1
+    working_directory: ~/react-application
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/react-application
+      - run: yarn install
+      - run: npm test
   build:
     docker:
       - image: circleci/node:latest
@@ -36,6 +47,9 @@ jobs:
 
 # orchestrate job run sequence
 workflows:
+  test:
+    jobs:
+      - test
   build-and-deploy:
     jobs:
       - build:
