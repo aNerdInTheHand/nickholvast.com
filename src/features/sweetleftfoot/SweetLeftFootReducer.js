@@ -1,8 +1,8 @@
 import { SET_NAME, SET_POSITION } from './actionTypes'
 
 const initialState = {
-  name: '',
-  position: 'LB'
+  name: undefined,
+  position: undefined
 }
 
 export default (state = initialState, action) => {

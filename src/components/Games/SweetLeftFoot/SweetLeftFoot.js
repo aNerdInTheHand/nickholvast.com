@@ -4,6 +4,7 @@ import {
   useName,
   usePosition
 } from '../../../features/sweetleftfoot'
+import Setup from './Subcomponents/Setup'
 
 const SweetLeftFoot = () => {
   /**
@@ -18,8 +19,9 @@ const SweetLeftFoot = () => {
   return (
     <div>
       <h2>Sweet Left Foot</h2>
+      {(!name || !position) && <Setup setName={setName} setPosition={setPosition} />}
       <p>Hi, {name}, {position} extraordinaire!</p>
-      <button
+      {/* <button
         type='button'
         onClick={() => setName('Steve Barnes')}
       >
@@ -30,7 +32,7 @@ const SweetLeftFoot = () => {
         onClick={() => setPosition('centre back')}
       >
         CB
-      </button>
+      </button> */}
     </div>
   )
 }
