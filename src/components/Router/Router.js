@@ -38,9 +38,9 @@ export default () => (
                 <NavItem href='/sully'>
                   <Nav.Link as={Link} to='/sully'>Sully</Nav.Link>
                 </NavItem>
-                {/* <NavItem href='redux'>
+                <NavItem href='redux'>
                   <Nav.Link as={Link} to='/redux'>Redux</Nav.Link>
-                </NavItem> */ }
+                </NavItem>
                 <NavItem href='/games'>
                   <Nav.Link as={Link} to='/games'>Games</Nav.Link>
                 </NavItem>
@@ -54,11 +54,11 @@ export default () => (
                 <Sully />
               </ErrorBoundary>
             </Route>
-            {/* <Route path="/redux">
+            <Route path="/redux">
               <ErrorBoundary>
                 <Redux />
               </ErrorBoundary>
-            </Route> */}
+            </Route>
             <Route path="/games">
               <ErrorBoundary>
                 <Games />

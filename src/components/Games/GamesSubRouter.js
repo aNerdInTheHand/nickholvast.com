@@ -7,7 +7,7 @@ import {
   useRouteMatch
 } from 'react-router-dom'
 import Dad from './Dad'
-import Footbawl from './Footbawl'
+import SweetLeftFoot from './SweetLeftFoot'
 
 export default () => {
   let { path, url } = useRouteMatch()
@@ -29,7 +29,7 @@ export default () => {
           <h3>Please select a game.</h3>
         </Route>
         <Route path={`${path}/sweetleftfoot`}>
-          <Footbawl />
+          <SweetLeftFoot />
         </Route>
         <Route path={`${path}/dad`}>
           <Dad />
