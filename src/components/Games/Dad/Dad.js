@@ -5,6 +5,7 @@ import generateScenario from './generateScenario'
 const Dad = () => {
   const [status, setStatus] = useState(gameStates.preGame)
   const [message, setMessage] = useState()
+  const [score, incrementScore] = useState(0)
 
   const renderPreGame = () => (
     <div>
@@ -44,12 +45,15 @@ const Dad = () => {
 
   const renderGameOver = () => (
     <div>
-      <h2>GAME OVER</h2>
+      <h3>GAME OVER</h3>
       {message && <p>{message}</p>}
       <p>Would you like to play again?</p>
       <button
         type='button'
-        onClick={() => setStatus(gameStates.inGame)}
+        onClick={() => {
+          setStatus(gameStates.inGame);
+          setMessage()
+        }}
       >
         Restart
       </button>
@@ -62,6 +66,7 @@ const Dad = () => {
       {status === gameStates.preGame && renderPreGame()}
       {status === gameStates.inGame && renderInGame()}
       {status === gameStates.gameOver && renderGameOver()}
+      {status !== gameStates.preGame && <p>Score: {score}</p>}
     </div>
   )
 }
