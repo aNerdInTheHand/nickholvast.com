@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { gameStates } from './constants'
+import generateScenario from './generateScenario'
 
 const Dad = () => {
   const [status, setStatus] = useState(gameStates.preGame)
+  const [message, setMessage] = useState()
 
   const renderPreGame = () => (
     <div>
@@ -17,13 +19,33 @@ const Dad = () => {
     </div>
   )
 
-  const renderInGame = () => (
-    <button type='button' onClick={() => setStatus(gameStates.gameOver)}>Wake baby</button>
+  const renderInGame = () => {
+    const { text, options } = generateScenario()
+    return (
+      <div>
+        {message && <p>{message}</p>}
+        <p>{text}</p>
+        {options.map((option, key) => renderOption(option, key))}
+      </div>
+    )
+  }
+
+  const renderOption = (option, key) => (
+    <button
+      key={key}
+      onClick={() => {
+        setStatus(option.success ? gameStates.inGame : gameStates.gameOver);
+        setMessage(option.success ? option.successMessage : option.failureMessage)}
+      }
+    >
+      {option.buttonText}
+    </button>
   )
 
   const renderGameOver = () => (
     <div>
       <h2>GAME OVER</h2>
+      {message && <p>{message}</p>}
       <p>Would you like to play again?</p>
       <button
         type='button'

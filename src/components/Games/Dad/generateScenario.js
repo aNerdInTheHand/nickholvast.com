@@ -1,0 +1,34 @@
+/**
+ * Dadding is difficult. Nothing you do has a greater than 10% chance of success.
+ * Generator two random numbers, one between 0 and 10 and one between 0 and 100.
+ * If the former is greater than the latter, you've got a rare win.
+ */
+const calculateSuccess = () => {
+  const randomOutOfTen = Math.random() * 10
+  const randomOutOfHundred = Math.random() * 100
+  return randomOutOfTen > randomOutOfHundred
+}
+
+export default () => ({
+  text: 'Baby has fallen asleep peacefully and easily in your arms. There\'s a match on TV just about to start. Do you hold the baby while you watch the match, put the baby in a moses basket in the room, or give the baby to your partner to look after?',
+  options: [
+    {
+      buttonText: 'Hold Baby',
+      failureMessage: 'You can\'t hide your primal scream of joy as Joelinton scores. The baby wakes up with a start and, seeing the frozen mix of joy and horror on your face as you realise the gravity of the situation and all of the life choices that have led you to this moment, contorts its face and cries out in existential crisis.',
+      success: calculateSuccess(),
+      successMessage: 'The game is a predictable snoozefest. Aren\'t games involving your team always? Baby slumbers peacefully and you hate yourself for not making more of the time. This is winning.'
+    },
+    {
+      buttonText: 'Moses Basket',
+      failureMessage: 'As you manoeuvre baby over the airspace of the Moses basket, its dreams shift uneasily to being dangled over a 4,000m sheer cliff. It jerks awake in horror and, as you almost drop it and a startled word escapes the Profanisaurus in your brain, baby scrunches up its face and cries.',
+      success: calculateSuccess(),
+      successMessage: 'Michael Owen is commentating. You almost fall asleep yourself placing baby in the Moses basket. Baby dreams about a far distant ancestor explaining how that would have been a goal if it went in. This is winning.'
+    },
+    {
+      buttonText: 'Give to Partner',
+      failureMessage: 'Baby dreams it is being abandoned by its daddy. Waking from this dream and finding itself halfway out of your arms, it realises its nightmare has come true and cries in infinite betrayal.',
+      success: calculateSuccess(),
+      successMessage: 'Baby cuddles into partner\'s safe, warm embrace and snuggles down for a long nap. Partner silently hates you. This is winning.'
+    }
+  ]
+})
