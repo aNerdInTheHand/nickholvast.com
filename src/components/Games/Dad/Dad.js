@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import { gameStates } from './constants'
-import generateScenario from './generateScenario'
+import { gameStates, scenarios } from './constants'
+// import generateScenario from './generateScenario'
 
 const Dad = () => {
   const [status, setStatus] = useState(gameStates.preGame)
   const [message, setMessage] = useState()
   const [score, incrementScore] = useState(0)
+  const [availableScenarios, setAvailableScenarios] = useState(scenarios)
+  console.log(availableScenarios)
 
   const renderPreGame = () => (
     <div>
@@ -21,22 +23,24 @@ const Dad = () => {
   )
 
   const renderInGame = () => {
-    const { text, options } = generateScenario()
+    const scenarioIndex = Math.floor(Math.random() * availableScenarios.length)
+    const { text, options } = availableScenarios[scenarioIndex]
     return (
       <div>
         {message && <p>{message}</p>}
         <p>{text}</p>
-        {options.map((option, key) => renderOption(option, key))}
+        {options.map((option, key) => renderOption(option, scenarioIndex, key))}
       </div>
     )
   }
 
-  const renderOption = (option, key) => (
+  const renderOption = (option, index, key) => (
     <button
       key={key}
       onClick={() => {
         setStatus(option.success ? gameStates.inGame : gameStates.gameOver);
-        setMessage(option.success ? option.successMessage : option.failureMessage)}
+        setMessage(option.success ? option.successMessage : option.failureMessage);
+        setAvailableScenarios(availableScenarios.filter((_, i) => i !== index))}
       }
     >
       {option.buttonText}
@@ -52,7 +56,8 @@ const Dad = () => {
         type='button'
         onClick={() => {
           setStatus(gameStates.inGame);
-          setMessage()
+          setMessage();
+          setAvailableScenarios(scenarios)
         }}
       >
         Restart
