@@ -1,4 +1,11 @@
 html {
-  background-color: #10aded;
+  background-color: #20bded;
   color: #1c1c1c;
+}
+
+h1 {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 5rem;
+  text-align: center;
+  text-decoration: underline;
 }
