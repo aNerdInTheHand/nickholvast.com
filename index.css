@@ -1,11 +1,19 @@
 html {
   background-color: #20bded;
   color: #1c1c1c;
+  font-family: 'Cabin Sketch', cursive;
 }
 
-h1 {
-  font-family: 'Cabin Sketch', cursive;
+.header {
   font-size: 5rem;
   text-align: center;
   text-decoration: underline;
+}
+
+.homepage-body {
+  text-align: center;
+}
+
+img {
+  align-items: center;
 }
