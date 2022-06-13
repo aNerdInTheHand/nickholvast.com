@@ -1,12 +1,24 @@
 import React, { useState } from 'react'
 import { gameStates, scenarios} from './constants'
-import { calculateSuccess, shuffleArray } from './helpers'
+import { calculateStatus, calculateSuccess, shuffleArray } from './helpers'
 
 const Dad = () => {
   const [status, setStatus] = useState(gameStates.preGame)
   const [message, setMessage] = useState()
   const [score, setScore] = useState(0)
+  const [highScore, setHighScore] = useState(0)
   const [availableScenarios, setAvailableScenarios] = useState(shuffleArray(scenarios))
+
+  const optionOnClickHandler = (option, scenarioIndex) => {
+    const success = calculateSuccess()
+    const remainingScenarios = availableScenarios.filter((_, i) => i !== scenarioIndex)
+    const status = calculateStatus(remainingScenarios, success, gameStates)
+    setScore(success ? score + 1 : score)
+    if (score > highScore) setHighScore(score)
+    setStatus(success ? gameStates.success : gameStates.gameOver)
+    setMessage(success ? option.successMessage : option.failureMessage)
+    setAvailableScenarios(remainingScenarios)
+  }
 
   const renderPreGame = () => (
     <div>
@@ -34,17 +46,10 @@ const Dad = () => {
   }
 
   const renderOption = (option, index, key) => {
-    const success = calculateSuccess()
-    console.log(success)
     return (
       <button
         key={key}
-        onClick={() => {
-          setScore(success ? score + 1 : score);
-          setStatus(success ? gameStates.success : gameStates.gameOver);
-          setMessage(success ? option.successMessage : option.failureMessage);
-          setAvailableScenarios(availableScenarios.filter((_, i) => i !== index))}
-        }
+        onClick={() => optionOnClickHandler(option, index)}
       >
         {option.buttonText}
       </button>
@@ -87,7 +92,21 @@ const Dad = () => {
   )
 
   const completedItMate = () => (
-    <h3>Being a dad? Completed it mate.</h3>
+    <div>
+      <h3>Being a dad? Completed it mate.</h3>
+      <p>You have taken everything baby can throw at you and come out of the other end somewhat intact!</p>
+      <p>Would you like to have another baby?</p>
+      <button
+        type='button'
+        onClick={() => {
+          setStatus(gameStates.inGame);
+          setMessage();
+          setAvailableScenarios(scenarios)
+        }}
+      >
+        Do It Again
+      </button>
+    </div>
   )
 
   return (
@@ -99,6 +118,7 @@ const Dad = () => {
       {status === gameStates.gameOver && renderGameOver()}
       {status === gameStates.completedItMate && renderCompletedItMate()}
       {status !== gameStates.preGame && <p>Score: {score}</p>}
+      <p>High Score: {highScore}</p>
     </div>
   )
 }
