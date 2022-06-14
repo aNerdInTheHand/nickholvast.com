@@ -8,7 +8,7 @@ function getRumour () {
       response.json()
         .then(jsonr => {
           console.log(jsonr)
-          document.getElementById('rumour').innerHTML = JSON.parse(jsonr.body).replace(/"/g, "'")
+          document.getElementById('rumour').innerHTML = jsonr.body.replace(/"/g, "'")
         })
     })
     .catch(err => console.error(err))
