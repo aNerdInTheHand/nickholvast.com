@@ -6,9 +6,9 @@ function getRumour () {
     .then(response => {
       console.log(response)
       response.json()
-        .then(jsonr => {
-          console.log(jsonr)
-          document.getElementById('rumour').innerHTML = jsonr.body.replace(/"/g, "'")
+        .then(rumour => {
+          console.log(rumour)
+          document.getElementById('rumour').innerHTML = rumour.replace(/"/g, "'")
         })
     })
     .catch(err => console.error(err))
