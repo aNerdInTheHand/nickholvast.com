@@ -1,7 +1,14 @@
+:root {
+  --font-family-header: 'Cabin Sketch', cursive;
+  --main-accent-color: #ff7b25;
+  --main-bg-color: #20bded;
+  --main-text-color: #1c1c1c;
+}
+
 html {
-  background-color: #20bded;
-  color: #1c1c1c;
-  font-family: 'Cabin Sketch', cursive;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: var(--font-family-header);
 }
 
 body {
@@ -18,10 +25,16 @@ body {
   flex-shrink: 0;
 }
 
+h1 {
+  margin: 0;
+}
+
 .header {
-  font-size: 5rem;
-  text-align: center;
-  text-decoration: underline;
+  border-bottom: 2px dashed var(--main-accent-color);
+  font-size: 2rem;
+  margin: 0;
+  text-align: left;
+  /* text-decoration: underline; */
 }
 
 .homepage-body {
