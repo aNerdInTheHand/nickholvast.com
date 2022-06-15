@@ -8,17 +8,25 @@
 html {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
+  display: flex;
   font-family: var(--font-family-header);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-body {
+.site-body {
+  align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
   min-height: 100vh;
+  width: 100%;
 }
 
-.content {
-  flex: 1 0 auto;
+.site-content {
+  flex: 1;
 }
 
 .footer {
@@ -31,13 +39,17 @@ h1 {
 
 .header {
   border-bottom: 2px dashed var(--main-accent-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0;
   text-align: left;
-  /* text-decoration: underline; */
+  width: 100%;
 }
 
 .homepage-body {
+  border: 1px dashed var(--main-accent-color);
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
   text-align: center;
 }
 
