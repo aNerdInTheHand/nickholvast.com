@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - web-components # temporary branch deploy
 jobs:
   run:
     runs-on: ubuntu-latest
