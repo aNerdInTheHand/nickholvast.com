@@ -14,6 +14,10 @@
   --stat-good-color: #e8ea5d;
   --stat-great-color: #74f77e;
   --stat-poor-color: #eee5e5;
+  --stat-color: #dddddd;
+  --stat-subhead-color: #908f91;
+  --stat-strength-bg-color: #313931;
+  --stat-strength-border-color: #89ba82;
 }
 
 .cv-body {
@@ -128,6 +132,7 @@
   height: 20px;
   width: 20px;
 }
+
 .minor-interest {
   background: linear-gradient(90deg, var(--role-minor-interest) 48%, #000000 48%);
   border: 2px solid black;
@@ -135,10 +140,60 @@
   height: 20px;
   width: 20px;
 }
+
 .low-interest {
   background: linear-gradient(90deg, var(--role-low-interest) 15%, #000000 15%);
   border: 2px solid black;
   border-radius: 50%;
   height: 20px;
   width: 20px;
+}
+
+.skill-category {
+  color: var(--stat-subhead-color);
+  margin: 1rem 0;
+  padding: 0;
+  text-align: left;
+}
+
+.skills-languages {
+  width: 48%;
+}
+
+.strength {
+  background-color: var(--stat-strength-bg-color);
+  border-bottom: 2px solid var(--main-bg-color);
+  border-left: 3px solid var(--stat-strength-border-color);
+}
+
+.skills-languages > div > p {
+  margin: 0;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.skill-rating {
+  text-align: right !important;
+}
+
+.skill-high {
+  color: var(--stat-great-color);
+}
+
+.skill-good {
+  color: var(--stat-good-color);
+}
+
+.skill-poor {
+  color: var(--stat-poor-color);
+}
+
+.skill-awful {
+  color: var(--stat-awful-color);
+}
+
+.skill-name {
+  display: grid;
+  grid-auto-flow: column;
+  width: 100%;
 }
