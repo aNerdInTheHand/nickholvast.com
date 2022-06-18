@@ -163,15 +163,16 @@
   font-size: 0.8rem;
 }
 
+/* .stats-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+} */
+
 .skill-category {
   color: var(--stat-subhead-color);
   margin: 1rem 0;
   padding: 0;
   text-align: left;
-}
-
-.skills-languages {
-  width: 48%;
 }
 
 .strength {
