@@ -10,6 +10,7 @@
   --main-card-color: #cbcbcb;
   --main-text-color: #1c1c1c;
   --roles-text-color: #cb4bbe;
+  --roles-favoured-bg-color: #551f44;
   --stat-awful-color: #9a989a;
   --stat-good-color: #e8ea5d;
   --stat-great-color: #74f77e;
@@ -107,10 +108,19 @@
   padding-left: 1rem;
 }
 
+.roles-list > div > p {
+  font-size: 0.9rem;
+  margin: 0.5rem;
+}
+
 .role {
   align-items: baseline;
   display: grid;
   grid-auto-flow: column;
+}
+
+.role-favoured {
+  background-color: var(--roles-favoured-bg-color);
 }
 
 .staff-roles-header {
@@ -147,6 +157,10 @@
   border-radius: 50%;
   height: 20px;
   width: 20px;
+}
+
+.stats-table {
+  font-size: 0.8rem;
 }
 
 .skill-category {
