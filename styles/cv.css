@@ -25,8 +25,7 @@
   background-color: var(--main-bg-color);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 1rem;
-  min-width: 1200px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .info-header, .main-cv-content {
@@ -46,7 +45,6 @@
 .main-cv-content {
   background-color: var(--main-bg-color);
   grid-template-columns: 25% 50% 25%;
-  min-height: 600px;
 }
 
 .info-details {
@@ -213,4 +211,10 @@
   display: grid;
   grid-auto-flow: column;
   width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .container, .info-header, .main-cv-content {
+    display: block;
+  }
 }
