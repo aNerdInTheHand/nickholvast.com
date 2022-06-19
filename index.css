@@ -50,6 +50,19 @@ h1 {
   width: 90vw;
 }
 
+.header-link-short {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header-link-short {
+    display: inline-block;
+  }
+  .header-link {
+    display: none;
+  }
+}
+
 .homepage-body {
   margin: 1rem;
   padding: 1rem;
@@ -65,8 +78,6 @@ h1 {
 }
 
 .about {
-  /* border-left: none;
-  border-right: none; */
   text-align: left;
 }
 

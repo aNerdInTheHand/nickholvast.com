@@ -25,7 +25,6 @@
   background-color: var(--main-bg-color);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 1rem;
-  /* overflow: hidden; */
 }
 
 .info-header, .main-cv-content {
@@ -37,7 +36,6 @@
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
   margin: 0 0 1rem 0;
-  /* max-height: 200px; */
   text-align: center;
   width: 90vw;
 }
@@ -216,5 +214,10 @@
 @media only screen and (max-width: 1000px) {
   .container, .info-header, .main-cv-content {
     display: block;
+  }
+
+  .cv-body {
+    padding: 0;
+    right: 0;
   }
 }
