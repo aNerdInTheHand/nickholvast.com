@@ -105,7 +105,6 @@
 }
 
 .roles-list > div > p {
-  font-size: 0.9rem;
   margin: 0.5rem;
 }
 
@@ -157,7 +156,6 @@
 
 .stats-table {
   display: grid;
-  font-size: 0.8rem;
   grid-auto-flow: column;
 }
 
@@ -209,6 +207,25 @@
   display: grid;
   grid-auto-flow: column;
   width: 100%;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--main-card-border-color);
+  margin: 1rem 0;
+}
+
+.border-top {
+  border-top: 1px solid var(--main-card-border-color);
+}
+
+.info-personality {
+  align-items: flex-start;
+  height: 100%;
+  text-align: left;
+}
+
+.container {
+  font-size: 0.85rem;
 }
 
 @media only screen and (max-width: 1000px) {
