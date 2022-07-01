@@ -114,7 +114,7 @@
   border-radius: 1rem;
   display: grid;
   grid-auto-flow: column;
-  padding: 5px;
+  padding: 5px 5px 0 5px;
 }
 
 .role-favoured {
