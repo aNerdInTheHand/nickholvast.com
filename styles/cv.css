@@ -9,6 +9,7 @@
   --main-card-border-color: #39363a;
   --main-card-color: #cbcbcb;
   --main-text-color: #1c1c1c;
+  --roles-alt-bg-color: #262327;
   --roles-text-color: #cb4bbe;
   --roles-favoured-bg-color: #551f44;
   --stat-awful-color: #9a989a;
@@ -110,12 +111,19 @@
 
 .role {
   align-items: baseline;
+  border-radius: 1rem;
   display: grid;
   grid-auto-flow: column;
+  padding: 5px;
 }
 
 .role-favoured {
   background-color: var(--roles-favoured-bg-color);
+}
+
+.role-alt {
+  background-color: var(--roles-alt-bg-color);
+  border-radius: 1rem;
 }
 
 .staff-roles-header {
