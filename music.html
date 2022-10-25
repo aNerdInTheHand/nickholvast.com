@@ -13,24 +13,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
-  <!-- <link rel="manifest" href="/site.webmanifest"> -->
+  <script src="components/footer.js" type="text/javascript" defer></script>
+  <script src="components/music/about.js" type="text/javascript" defer></script>
+  <script src="components/header.js" type="text/javascript" defer></script>
 </head>
 
-<body>
-  <div>
-    <h1>Sully Dog</h1>
-  </div>
+<body class="site-body">
+  <header-component></header-component>
 
-  <div>
-    <img srcset="images/Sunset-320.webp 320w,
-                 images/Sunset-800.webp 800w
-                 images/Sunset-1200.webp 1200w"
-         sizes="(max-width: 600px) 320px,
-                (min-width: 1200px) 1200px,
-                800px"
-         src="images/Sunset-800.webp"
-         alt="Sully at sunset">
-  </div>
+  <main class="site-content">
+
+    <div class="section about">
+      <about-music-component></about-music-component>
+    </div>
+    
+    <div class="homepage-body">
+
+      <div class="section">
+        <h2>Music</h2>
+        <p class="section-info">
+          It's great.
+        </p>
+      </div>
+      
+    </div>
+
+  </main>
+  
+  <footer-component></footer-component>
 </body>
 
 </html>
