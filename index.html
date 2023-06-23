@@ -5,8 +5,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="theme-color" content="#88f24f" />
   <meta name="description" content="Nick Holvast personal website." />
-  <title>Nick Holvast</title>
+  <title>Nick Holvast CV</title>
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="styles/cv.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -23,21 +24,181 @@
   <header-component></header-component>
 
   <main class="site-content">
-
-    <div class="section about">
-      <about-component></about-component>
-    </div>
     
-    <div class="homepage-body">
+    <div class="cv-body container">
 
-      <div class="section">
-        <h2>Come And Get Me Plea</h2>
-        <p class="section-info">
-          A small app to get in on the fun of football transfer silly season.
-        </p>
-        <p id='rumour' class='rumour-element'>Consulting reliable sources...</p>
-        <button onclick="getRumour()" class='rumour-element'>Next Rumour</button>
+      <!-- top bar of the page -->
+      <div class="info-header container">
+
+        <!-- picture, basic details -->
+        <div class="info-details container">
+          <div class="img-mugshot">
+            <img src="favicon-32x32.png" />
+          </div>
+          <div>
+            <p>🏴󠁧󠁢󠁥󠁮󠁧󠁿</p>
+          </div>
+          <div class="expand">
+            <p>34 years old</p>
+            <p>English</p>
+            <p>Male</p>
+          </div>
+        </div>
+        <!-- end picture, basic details -->
+
+        <!-- contract info panel -->
+        <div class="info-contract">
+          <div>
+            <p>Contracted to Multiverse</p>
+            <p class="emphasis">Senior Software Engineer</p>
+            <p>Permanent Contract</p>
+          </div>
+        </div>
+        <!-- end contract info panel -->
+
+        <!-- reputation panel -->
+        <div class="info-reputation">
+          <div>
+            <p>Reputation</p>
+            <p>⭐⭐</p>
+            <p>New Starter</p>
+          </div>
+        </div>
+        <!-- end reputation panel -->
+
       </div>
+      <!-- end top bar of the page -->
+
+      <!-- main panel of CV (roles, stats, personality) -->
+      <div class="main-cv-content container">
+
+        <!-- role suitability -->
+        <div class="info-roles">
+          <div>
+            <h3 class="staff-roles-header">Role Interest</h3>
+          </div>
+          <div class="roles-list">
+            <div class="role role-favoured"><div class="interest-circle high-interest"></div><p>Full Stack Engineer</p></div>
+            <div class="role"><div class="interest-circle some-interest"></div><p>Front End Engineer</p></div>
+            <div class="role role-alt"><div class="interest-circle some-interest"></div><p>Back End Engineer</p></div>
+            <div class="role"><div class="interest-circle some-interest"></div><p>Dev Ops Engineer</p></div>
+            <div class="role role-alt"><div class="interest-circle minor-interest"></div><p>Infrastructure Engineer</p></div>
+            <div class="role"><div class="interest-circle low-interest"></div><p>Tecnhical Business Analyst</p></div>
+          </div>
+        </div>
+        <!-- end role suitability -->
+
+        <!-- main stats -->
+        <div class="stats-table container">
+          <div class="stats-wrapper">
+            <div class="skills-languages">
+              <p class="skill-category">Languages, Frameworks, Technical Skills</p>
+              <div class="skill-name strength"><p>JavaScript/Nodejs</p><p class='skill-rating skill-high'>18</p></div>
+              <div class="skill-name strength"><p>React + Redux</p><p class='skill-rating skill-high'>18</p></div>
+              <div class="skill-name"><p>CSS</p><p class='skill-rating skill-good'>14</p></div>
+              <div class="skill-name"><p>Svelte.js</p><p class='skill-rating skill-poor'>9</p></div>
+              <div class="skill-name"><p>Phoenix</p><p class='skill-rating skill-poor'>8</p></div>
+              <div class="skill-name"><p>Elixir</p><p class='skill-rating skill-poor'>8</p></div>
+              <div class="skill-name"><p>Python</p><p class='skill-rating skill-poor'>8</p></div>
+              <div class="skill-name"><p>Java</p><p class='skill-rating skill-poor'>5</p></div>
+              <div class="skill-name"><p>SQL</p><p class='skill-rating skill-good'>12</p></div>
+              <div class="skill-name"><p>C#</p><p class='skill-rating skill-awful'>1</p></div>
+              <div class="skill-name"><p>Terraform</p><p class='skill-rating skill-good'>12</p></div>
+            </div>
+          </div>
+          <div class="skills-languages">
+            <p class="skill-category">Mental</p>
+            <div class="skill-name strength"><p>Adaptability</p><p class='skill-rating skill-high'>20</p></div>
+            <div class="skill-name strength"><p>Determination</p><p class='skill-rating skill-high'>19</p></div>
+            <div class="skill-name strength"><p>Level of Discipline</p><p class='skill-rating skill-good'>14</p></div>
+            <div class="skill-name strength"><p>Motivating</p><p class='skill-rating skill-good'>14</p></div>
+            <div class="skill-name"><p>People Management</p><p class='skill-rating skill-poor'>7</p></div>
+          </div>
+          <div class="stats-wrapper">
+            <div class="skills-languages">
+              <p class="skill-category">Tools</p>
+              <div class="skill-name strength"><p>GitLab, GitHub</p><p class='skill-rating skill-high'>18</p></div>
+              <div class="skill-name strength"><p>GitLab CI</p><p class='skill-rating skill-high'>18</p></div>
+              <div class="skill-name"><p>GitHub actions</p><p class='skill-rating skill-good'>13</p></div>
+              <div class="skill-name strength"><p>AWS</p><p class='skill-rating skill-good'>14</p></div>
+              <div class="skill-name"><p>Serverless</p><p class='skill-rating skill-good'>10</p></div>
+              <div class="skill-name"><p>Bash scripting</p><p class='skill-rating skill-poor'>7</p></div>
+              <div class="skill-name strength"><p>Jira</p><p class='skill-rating skill-high'>15</p></div>
+              <div class="skill-name strength"><p>Confluence</p><p class='skill-rating skill-high'>15</p></div>
+            </div>
+          </div>
+        </div>
+        <!-- end contract info panel -->
+
+        <!-- personality and tends to/not to panel -->
+        <div class="info-personality container">
+          <div class="border-bottom">
+            <h4>PERSONALITY</h4>
+            <p>Ambitious</p>
+          </div>
+          <div class="border-top">
+            <h4>TENDS TO</h4>
+            <p>Pair program</p>
+            <p>Mentor juniors</p>
+            <p>Work remotely</p>
+            <p>Learn by doing</p>
+            <p>Champion friendly work environment</p>
+            <p>Slide tackle colleagues</p>
+            <p>Write comprehensive merge requests</p>
+            <p>Code to music</p>
+          </div>
+          <div class="border-top">
+            <h4>TENDS NOT TO</h4>
+            <p>Enforce code coverage</p>
+            <p>Finish personal projects</p>
+            <p>Extensively read documentation</p>
+          </div>
+        </div>
+        <!-- end personality and tends to/not to panel -->
+
+      </div>
+
+      <!-- fitness, dynamics, plans and bans row -->
+      <div class="fdpb container">
+        
+        <!-- fitness panel -->
+        <div class="container fitness">
+          <div>
+            <h4 class="link-style-header">FITNESS ></h4>
+            <p>Fully fit</p>
+          </div>
+        </div>
+        <!-- x -->
+
+        <!-- dynamics panel -->
+        <div class="container dynamics">
+          <div>
+            <h4 class="link-style-header">DYNAMICS ></h4>
+            <p>Octopi (Career Builders)</p>
+            <span>4 Positives</span> / <span>0 Negatives</span>
+            <p>Hopes he will learn a lot while at Multiverse</p>
+          </div>
+        </div>
+        <!-- x -->
+
+        <!-- plans panel -->
+        <div class="container plans">
+          <div>
+            <h4 class="link-style-header">PLANS ></h4>
+            <p>No short term plans</p>
+            <p>Wants to end his career in the Netherlands</p>
+          </div>
+        </div>
+        <!-- x -->
+
+        <!-- bans panel -->
+        <div class="container career-stats">
+          <h4 class="link-style-header">CAREER STATS ></h4>
+        </div>
+        <!-- x -->
+
+      </div>
+      <!-- end fitness, dynamics, plans and bans row -->
       
     </div>
 
@@ -45,7 +206,6 @@
   
   <footer-component></footer-component>
 
-  <script type="text/javascript" src="scripts/rumours.js"></script>
 </body>
 
 </html>

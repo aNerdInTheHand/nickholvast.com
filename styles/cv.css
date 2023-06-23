@@ -1,17 +1,17 @@
 :root {
   --font-family-header: 'Cabin Sketch', cursive;
-  --role-high-interest: #76fa80;
-  --role-some-interest: #f4ca60;
-  --role-minor-interest: #f2a35e;
-  --role-low-interest: #d75654;
   --main-bg-color: #17161b;
   --main-card-bg-color: #212024;
   --main-card-border-color: #39363a;
   --main-card-color: #cbcbcb;
   --main-text-color: #1c1c1c;
+  --role-high-interest: #76fa80;
+  --role-low-interest: #d75654;
+  --role-minor-interest: #f2a35e;
+  --role-some-interest: #f4ca60;
   --roles-alt-bg-color: #262327;
-  --roles-text-color: #cb4bbe;
   --roles-favoured-bg-color: #551f44;
+  --roles-text-color: #cb4bbe;
   --stat-awful-color: #9a989a;
   --stat-good-color: #e8ea5d;
   --stat-great-color: #74f77e;
@@ -20,6 +20,7 @@
   --stat-subhead-color: #908f91;
   --stat-strength-bg-color: #313931;
   --stat-strength-border-color: #89ba82;
+  --link-pink: #7C2C91;
 }
 
 .cv-body {
@@ -28,7 +29,7 @@
   margin: 1rem;
 }
 
-.info-header, .main-cv-content {
+.info-header, .main-cv-content, .fdpb {
   align-items: center;
   background-color: var(--main-card-bg-color);
   color: var(--main-card-color);
@@ -41,19 +42,27 @@
   width: 90vw;
 }
 
+.fdpb {
+  text-align: left;
+}
+
 .main-cv-content {
   background-color: var(--main-bg-color);
   grid-template-columns: 25% 50% 25%;
 }
 
-.info-details {
+.info-details, .fitness, .dynamics, .career-stats {
   display: grid;
   gap: 0;
   grid-auto-flow: column;
   position: relative;
 }
 
-.info-details::after {
+.fitness {
+  padding-left: 1rem;
+}
+
+.info-details::after, .info-contract::after, .fitness::after, .dynamics::after, .plans::after {
   border-right: 2px solid var(--main-card-border-color);
   content: '';
   height: 80%;
@@ -68,15 +77,6 @@
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
   position: relative;
-}
-
-.info-contract::after {
-  border-right: 2px solid var(--main-card-border-color);
-  content: '';
-  height: 80%;
-  position: absolute;
-  right: 0;
-  top: 10%;
 }
 
 .emphasis {
@@ -230,6 +230,10 @@
   align-items: flex-start;
   height: 100%;
   text-align: left;
+}
+
+.link-style-header {
+  color: var(--roles-text-color);
 }
 
 .container {
